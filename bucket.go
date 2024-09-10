@@ -26,9 +26,8 @@ func cacheDecorator(f myFunc) myFunc {
 
 // someExpensiveComputation is an example function we want to cache.
 func someExpensiveComputation(n int) int {
-	// Example expensive computation
 	fmt.Printf("Computing result for %d\n", n)
-	return n * n // For example purposes, let's assume the expensive computation is squaring the number.
+	return n * n 
 }
 
 func main() {
@@ -36,8 +35,8 @@ func main() {
 	cachedComputation := cacheDecorator(someExpensiveComputation)
 
 	// Call the decorated function multiple times with same input.
-	fmt.Println(cachedComputation(5)) // Should compute and cache
-	fmt.Println(cachedComputation(5)) // Should return cached result
-	fmt.Println(cachedComputation(10)) // Should compute and cache
-	fmt.Println(cachedComputation(10)) // Should return cached result
+	fmt.Println(cachedComputation(5))
+	fmt.Println(cachedComputation(5))
+	fmt.Println(cachedComputation(10)) 
+	fmt.Println(cachedComputation(10)) 
 }
