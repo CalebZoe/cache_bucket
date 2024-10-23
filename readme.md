@@ -38,7 +38,7 @@ The caching system ensures that repeated calls with the same input return a cach
 
 ## Installation
 
-To run this code, you'll need to have Go installed on your machine. If you don't have Go installed, you can follow the [official Go installation guide](https://golang.org/doc/install).
+To run this code, you'll need to have Go installed on your machine.
 
 ### Steps:
 
@@ -70,9 +70,4 @@ Computing result for 10
 
 In this example, you can see that when the function is called with `5` and `10` for the first time, the expensive computation is performed. For subsequent calls with the same inputs, the cached results are returned without performing the computation again.
 
-## Notes
 
-- This example uses a `sync.Mutex` to ensure thread safety. This means it can be safely used in concurrent Go programs.
-- You can replace the `someExpensiveComputation` function with any other function that is computationally expensive, and the caching decorator will optimize it similarly.
-
-Feel free to extend and modify the code to suit your use case!
